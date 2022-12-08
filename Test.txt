@@ -3,5 +3,3 @@ Testing pull
 New test for push from my laptop
 
 Further test for pull to laptop
-
-hello
