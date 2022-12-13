@@ -108,7 +108,7 @@ const Bookingpage =()=> {
             <br></br>
             <br></br>
 
-            <button >Confirm Booking</button>
+            <button className={classes.bttn} >Confirm Booking</button>
           </div>
         </div>
 
