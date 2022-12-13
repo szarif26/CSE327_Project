@@ -53,9 +53,9 @@ const Navbar = () => {
           {" "}
             <Link
               className={[Classes.nounderline, Classes.navbarli].join(" ")}
-              to="/booking"
+              to="/Bookingpage"
             >
-              Dashboard
+              Booking
             </Link>
         
         </li>
@@ -65,7 +65,7 @@ const Navbar = () => {
        
           <Link
               className={[Classes.nounderline, Classes.navbarli].join(" ")}
-              to="/userloginpage"
+              to="/"
             >
               Log In
             </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 Classes.navbarli,
                 Classes.navbarlilogout,
               ].join(" ")}
-              to="/userloginpage"
+              to="/"
             >
               Log Out
             </Link>
