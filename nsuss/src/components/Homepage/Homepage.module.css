@@ -7,16 +7,7 @@
     align-items: center;
     min-height: 700px;
   }
-
-  .background2 {
-    background-image: url(../../../src/Assets/phone.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+  
 .row {
     display: flex;
     height: 95%;

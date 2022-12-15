@@ -1,18 +1,15 @@
 .container {
+  background-image: url(../../../src/Assets/BG-1.png);
     margin: 0 auto;
-    background-color: #3d444b;
+    background-color: #000000;
     background-size: cover;
-    width: 100%;
+    max-width: 750;
     margin: auto;
-    max-height: 10s0px;
+    max-height: 100px;
     border: 0.1px;
     padding: 1%;
   }
   
-  .navbarlogo {
-    max-width: 35%;
-    margin-bottom:1. 0%;
-  }
   .navmenubtn {
     display: inline;
     color: #0a3d62;
@@ -29,11 +26,22 @@
   .li {
     display: inline;
   }
+  .logo {
+    display: inline;
+    color: orange;
+    align-items: left;
+    display: inline;
+    padding: 0.2em 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 150px;
+  }
   .navul {
     display: inline;
     list-style-type: none;
     position: left;
-    background-color: #3d444b;
     align-items: center;
     background-size: cover;
     width: 100%;
@@ -42,23 +50,21 @@
   
   .navbarli {
     display: inline;
-    color: #afb8bf;
+    color: aliceblue;
     padding: 0.2em 1em;
     font-size: 1.5rem;
     font-weight: bold;
     background-color: transparent;
     border: 1px solid transparent;
     width: 150px;
-    
-   
   }
   .navbarlilogout {
     display: inline;
-    color: #afb8bf;
+    color: aliceblue;
     padding: 0.2em 1em;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: rgb(83, 48, 48);
+    background-color:rgb(100, 0, 0);
     border: 1px solid transparent;
     width: 150px;
     margin: 0px 0px 65px 0px;

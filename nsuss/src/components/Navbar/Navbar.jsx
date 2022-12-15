@@ -1,32 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavbarLogo from "../../Assets/NavbarLogo.png";
 import Classes from "./Navbar.module.css";
 const Navbar = () => {
   
   return (
     <div className={Classes.container}>
       <ul className={Classes.navul}>
-        <li className={Classes.navmenubtn}>
+        <li className={Classes.logo}>
           <Link
-            className={[Classes.nounderline, Classes.navbarli].join(" ")}
+            className={[Classes.nounderline, Classes.logo].join(" ")}
             to="/"
           >
-            <img
-              className={Classes.navbarlogo}
-              src={NavbarLogo}
-              alt={NavbarLogo}
-            />
-          </Link>
-        </li>
-
-        <li className={Classes.li}>
-          {" "}
-          <Link
-            className={[Classes.nounderline, Classes.navbarli].join(" ")}
-            to="/"
-          >
-            Home
+            Shuttle
           </Link>
         </li>
 
@@ -53,22 +38,15 @@ const Navbar = () => {
           {" "}
             <Link
               className={[Classes.nounderline, Classes.navbarli].join(" ")}
-              to="/bookingpage"
+              to="/adminpage"
             >
-              Booking
+              Admin page
             </Link>
         
         </li>
 
         <li className={Classes.li}>
           {" "}
-       
-          <Link
-              className={[Classes.nounderline, Classes.navbarli].join(" ")}
-              to="/"
-            >
-              Log In
-            </Link>
             <Link
             
               className={[
