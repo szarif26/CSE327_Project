@@ -1,0 +1,146 @@
+.background{
+    background-image: url(../../Assets/Adminpage.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 700px;
+    background-position: flex;
+  }
+
+  .Container {
+    min-height: 768px;
+    background-color: #000;
+    opacity: .7;
+    padding:2%;
+    display: flex;
+    min-width: 900px;
+  }
+
+.inputbox {
+    padding: 7px;
+    display: inline;
+    border: 1px solid rgb(61, 63, 64);
+    background: #3c1361;
+    width: 250px;
+    height: 50px;
+    margin: 20px;
+    align-items: center;
+    border-radius: 10px;
+    color: azure;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 12px 0px;
+    background: orange;
+    border-radius: 10px;
+    margin-left: 18px;
+    margin-top: 0px;
+    font-family: serif;
+    margin: 20px;
+}
+
+.button:hover {
+    background-color:rgba(255, 166, 0, 0.7);
+}
+
+.h1 {
+    text-align: center;
+    text-decoration: wavy underline;
+    font-family: cursive;
+    color: #3c1361;
+}
+
+.Item_List {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container2 {
+    min-height: 768px;
+    border: 1px dotted rgb(6, 6, 6);
+    padding: 2%;
+}
+
+.heading {
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/*list*/
+
+.li {
+    display: inline;
+    border: 1px solid rgb(147, 171, 118);
+    font-size: 20px;
+    font-weight: 10px;
+    padding: 6px;
+    color: aliceblue;
+    display: table-cell;
+    width: 200px;
+    height: auto;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+
+}
+
+.li1 {
+    display: inline;
+    border: 1px solid rgb(147, 171, 118);
+    font-size: 20px;
+    font-weight: 10px;
+    padding: 6px;
+    color: aliceblue;
+    display: table-cell;
+    width: 110px;
+    height: auto;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+
+}
+
+.li2 {
+    display: inline;
+    border: 1px solid rgb(147, 171, 118);
+    font-size: 20px;
+    font-weight: 10px;
+    padding: 6px;
+    color: aliceblue;
+    display: table-cell;
+    width: 250px;
+    height: auto;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+
+}
+
+.ul {
+    margin-top: 0px;
+    height: 45px;
+    display: flex;
+    margin-bottom: 0px;
+    margin-left: 100px;
+
+}
+
+.btn {
+
+    color: rgb(2, 2, 2);
+    font-weight: 300;
+    background-color: white;
+    border-radius: 4px;
+    height: 30px
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    background-color: #5b5350;
+}

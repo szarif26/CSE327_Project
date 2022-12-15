@@ -27,7 +27,7 @@ const Adminpage = () => {
               </div>
             </button>
           </Link>
-          <Link className={classes.nounderline} to="/Bookinglist">
+          <Link className={classes.nounderline} to="/bookinglist">
             <button type="submit" className={classes.button}>
               <div className={classes.board3}>
                 <h5 className={classes.h5}>Bookinglist</h5>

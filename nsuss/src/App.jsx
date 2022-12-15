@@ -9,6 +9,9 @@ import Homepage from "./components/Homepage/Homepage";
 import Loginpage from "./components/Login/Userloginpage/Loginpage";
 import Registrationpage from "./components/Create New Account/registrationpage";
 import Adminpage from "./components/Adminpages/Adminpage";
+import Bookinglist from "./components/Adminpages/Bookinglist";
+import Routespage from "./components/Adminpages/Routespage";
+import Vehiclepage from "./components/Adminpages/Vehiclepage";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path="/loginpage" exact element={<Loginpage />} />
           <Route path="/registrationpage" exact element={<Registrationpage/>} />
           <Route path="/adminpage" exact element={<Adminpage/>} />
+          <Route path="/bookinglist" exact element={<Bookinglist/>} />
+          <Route path="/routespage" exact element={<Routespage/>} />
+          <Route path="/vehiclepage" exact element={<Vehiclepage/>} />
         </Routes>
 
         <Footerpage />
