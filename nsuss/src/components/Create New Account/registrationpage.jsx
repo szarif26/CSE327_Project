@@ -8,10 +8,6 @@ const registrationpage = () => {
 
             <div className={classes.row}>
                 <div className={classes.col}>
-                    <div className={classes.board}>
-                    </div>
-                </div>
-                <div className={classes.col}>
                     <div className={classes.content}>
                         <div className={classes.container2}>
                             <div className={classes.textcenter}>
@@ -65,12 +61,16 @@ const registrationpage = () => {
                                         <button className={classes.loginbtn}>Log In</button>
                                     </Link>
                                     <Link to="/">
-                                    <button className={classes.homebtn}>Home</button>
+                                        <button className={classes.homebtn}>Home</button>
                                     </Link>
-                                    
+
                                 </form>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className={classes.col}>
+                    <div className={classes.board}>
                     </div>
                 </div>
             </div>
