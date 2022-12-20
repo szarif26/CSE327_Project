@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 const PrivateAdminComponents=()=>{
     const userID = JSON.parse(window.localStorage.getItem("user")).userid;
     let auth=false;
-    if(userID==="shuttle"){
+    if(userID==="admin"){
         auth=true;
     }
     else auth=false;

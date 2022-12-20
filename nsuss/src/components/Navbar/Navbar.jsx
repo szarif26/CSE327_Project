@@ -1,7 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Classes from "./Navbar.module.css";
 const Navbar = () => {
+  const auth = localStorage.getItem("user");
+  
+  let passAuth = false;
+  
+    if(auth){
+      const studID = parseInt(JSON.parse(window.localStorage.getItem("user")).userid);
+      const facID = JSON.parse(window.localStorage.getItem("user")).userid;
+      if ((studID>1000000000 && studID<9999999999) || facID.length===3||facID.length===4) {
+        passAuth = true;
+      } else passAuth = false;
+    }
+  
+    let adAuth = false;
+  
+    if(auth){
+      const adID = JSON.parse(window.localStorage.getItem("user")).userid;
+      if (adID==='admin') {
+        adAuth = true;
+      } else adAuth = false;
+    }
+
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.clear();
+    navigate("/");
+  };
   
   return (
     <div className={Classes.container}>
@@ -11,7 +37,7 @@ const Navbar = () => {
             className={[Classes.nounderline, Classes.logo].join(" ")}
             to="/"
           >
-            Shuttle
+            NSU Shuttle
           </Link>
         </li>
 
@@ -19,7 +45,7 @@ const Navbar = () => {
           {" "}
           <Link
             className={[Classes.nounderline, Classes.navbarli].join(" ")}
-            to=""
+            to="/contact"
           >
             Contact
           </Link>
@@ -28,7 +54,7 @@ const Navbar = () => {
           {" "}
           <Link
             className={[Classes.nounderline, Classes.navbarli].join(" ")}
-            to=""
+            to="/about"
           >
             About
           </Link>
@@ -36,30 +62,43 @@ const Navbar = () => {
 
         <li className={Classes.li}>
           {" "}
+          {adAuth ? (
             <Link
-              className={[Classes.nounderline, Classes.navbarli].join(" ")}
-              to="/adminpage"
-            >
-              Admin page
-            </Link>
-        
+            className={[Classes.nounderline, Classes.navbarli].join(" ")}
+            to="/adminpage"
+          >
+            Admin page
+          </Link>
+          ) : null}
         </li>
 
         <li className={Classes.li}>
           {" "}
+          {passAuth ? (
             <Link
-            
-              className={[
-                Classes.nounderline,
-                Classes.navbarli,
-                Classes.navbarlilogout,
-              ].join(" ")}
-              to="/"
-            >
-              Log Out
-            </Link>
-            
-          
+            className={[Classes.nounderline, Classes.navbarli].join(" ")}
+            to="/bookingpage"
+          >
+            Booking Page
+          </Link>
+          ) : null}
+        </li>
+        
+        <li className={Classes.li}>
+          {" "}
+          {auth ? (
+            <Link
+            onClick={logout}
+            className={[
+              Classes.nounderline,
+              Classes.navbarli,
+              Classes.navbarlilogout,
+            ].join(" ")}
+            to="/"
+          >
+            Log Out
+          </Link>
+          ) :null}
         </li>
       </ul>
     </div>

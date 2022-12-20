@@ -1,83 +1,7 @@
-.form {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 30px 0 (224, 224, 224, 1);
-    padding: 60px 50px;
-    max-width: 350px;
-    border-radius: 20px;
-    height: 200px;
-  }
 
-  
-  
-  .formlabel {
-    background-color: azure;
-    margin: auto;
-    font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 100px;
-    height: 30px;
-    color: rgba(9, 44, 70);
-    border: 5px 5px black solid;
-    border-radius: 10px;
-    float: left;
-  }
-  .formselect {
-    background-color: azure;
-    margin: auto;
-    font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 200px;
-    height: 30px;
-    color: rgb(10, 45, 72);
-    border: 5px 5px black solid;
-    border-radius: 10px;
-    float: left;
-  }
-  
-  .btn {
-    padding: 0.5em 1em;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    background-color: rgb(153, 163, 165);
-    border: 1px solid #222f3e;
-    border-radius: 15px;
-  }
-  
-  .btn:hover {
-    opacity: 0.5;
-  }
-  .bttn{
-    height:30px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    background-color: rgb(153, 163, 165);
-    border: 1px solid #222f3e;
-    border-radius: 15px;
-
-
-  }
-  .bttn:hover {
-    opacity: 0.5;
-  }
-  .background {
-    background-image: url(../../Assets/bookingpageuser.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-  
-  .container {
+.container {
     width: 100%;
     height: 100vh;
-  
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
@@ -93,6 +17,152 @@
     flex-basis: 50%;
   }
   
-  .h1 {
+  .h11 {
     color: aliceblue;
   }
+/* New CSS */
+
+  .background {
+    background-image: url(../../Assets/BG-1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+  }
+
+.row {
+    display: flex;
+    height: 95%;
+    align-items: center;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+
+  .h1 {
+    color: rgb(30, 33, 32);
+    font-size: 50px;
+  }
+  
+  .p {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: orange;
+    font-size: 15px;
+    margin: 5px;
+    margin-left: 100px;
+    margin-bottom: -25px;
+  }
+
+
+.content {
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.contentpar {
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.contenth1 {
+    font-family: Arial;
+    font-size: 50px;
+    padding-left: 20px;
+    padding-top: 230px;
+    /* margin-top: 9%; */
+    letter-spacing: 2px;
+}
+
+.contentspan {
+    color: orange;
+    font-size: 60px;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    padding: 15px 25px;
+    background-image: url(../../Assets/phone.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+.container2 {
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
+    /* position: absolute; */
+    /* top: 170px;
+    left: 870px; */
+    border-radius: 10px;
+    padding: 25px;
+  }
+
+  .forminput {
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid orange;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.btn {
+    width: 240px;
+    height: 40px;
+    background: orange;
+    border: none;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: orange;
+}
+
+.formh2 {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: orange;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 25px;
+    margin-left: 100px;
+    padding: 8px;
+}
+.span{
+  font-family: sans-serif;
+  text-align: center;
+  color: rgba(13, 177, 24, 0.901);
+  font-size: 22px;
+  background-color: transparent;
+  margin-left: 100px;
+
+
+}

@@ -1,0 +1,73 @@
+.background {
+    background-image: url(../../../src/Assets/BG-1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+  }
+  
+.row {
+    display: flex;
+    height: 95%;
+    align-items: center;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+
+  .h1 {
+    color: rgb(30, 33, 32);
+    font-size: 50px;
+  }
+  
+  .p {
+    color: rgb(252, 252, 252);
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 10px;
+    padding: 2px 0;
+  }
+
+
+.content {
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.contentpar {
+    padding-left: 70px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    display:flex;
+}
+.contentpar3 {
+    padding-left: 70px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    display:flex;
+    color:orange;
+}
+
+
+
+
+
+
+.board {
+    width: 500px;
+    height: 500px;
+    padding: 15px 25px;
+    background-image: url(../../../src/Assets/phone.png);
+    background-position: center;
+    background-size: cover;
+  }
+

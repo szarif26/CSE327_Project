@@ -40,9 +40,9 @@ const Adminpage = () => {
          
         </div>
         <div className={classes.col}>
-          <h1 className={classes.h1}>Welcome Admin</h1>
-          <p className={classes.p}>To Dashboard.</p>
-          <button type="submit" className={classes.button}>
+          <h1 className={classes.h11}>Welcome Admin</h1>
+          <p className={classes.pp}>To Dashboard</p>
+          <button type="submit" className={classes.btn}>
             Details
           </button>
         </div>

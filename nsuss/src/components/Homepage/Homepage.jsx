@@ -1,7 +1,8 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./Homepage.module.css";
 const Homepage = () => {
+    const auth = localStorage.getItem("user");
 
     return (
         <div className={classes.background} >
@@ -12,10 +13,9 @@ const Homepage = () => {
                         <h1 className={classes.contenth1}> Book a <span className={classes.contentspan}>Seat</span> with us</h1>
                         <p className={classes.contentpar}>Commute daily in AC Sedans. Book a seat to enjoy rides at <br></br>fixed prices and affordable
                             rates.</p>
-                        <Link to="/loginpage">
+                        {auth ? null : <Link to="/loginpage">
                             <button className={classes.button}>Login</button>
-                        </Link>
-
+                        </Link>}
                     </div>
                 </div>
                 <div className={classes.col}>

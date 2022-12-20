@@ -3,34 +3,102 @@ import classes from "./Vehiclepage.module.css";
 
 const Vehiclepage = () => {
 
-    return (
-        <div className={classes.background}>
-            <div className={classes.Item_List}>
-                <h1 className={classes.h1}> Add New Vehicle </h1>
-                <br></br>
-                <input
-                    className={classes.inputbox}
-                    type="text"
-                    placeholder="Vehicle ID" />
-                <input className={classes.inputbox} type="text" placeholder="Brand" />
-                <input className={classes.inputbox} type="text" placeholder="Model" />
-                <input
-                    className={classes.inputbox}
-                    type="text"
-                    placeholder="Registration Number"
+    const [vehicle, setVehicle] = useState([]);
+useEffect(() => {
+    getVehicle();
+  }, []);
+  const [vehicleId, setVehicleId] = useState("");
+  const [brand, setBrand] = useState("");
+  const [model, setModel] = useState("");
+  const [registrationNumber, setRegistrationNumber] = useState("");
+  const [capacity, setCapacity] = useState("");
 
-                />
-                <input
-                    className={classes.inputbox}
-                    type="text"
-                    placeholder="Capacity"
-                ></input>
-                <button className={classes.button}>Add Vehicle</button>
+  const handleAddVehicle = async () => {
+    let result = await fetch("http://localhost:4000/addvehicle", {
+      method: "post",
+      body: JSON.stringify({ vehicleId, brand, model, registrationNumber, capacity }),
+      headers: {
+        "content-Type": "application/json",
+      },
+    });
+    result = await result.json();
+    console.warn(result);
+    getVehicle();
+    alert("Successfully Added Your Vehicle");
+  };
+
+  const getVehicle = async () => {
+    let result = await fetch('http://localhost:4000/getVehicle');
+    result = await result.json();
+    setVehicle(result);
+  }
+
+  const deleteVehicle = async (vehicleId) => {
+    console.warn(vehicleId)
+    let result = await fetch(`http://localhost:4000/deleteVehicle/${vehicleId}`, {
+      method: "Delete"
+    });
+    result = await result.json();
+    if (result) {
+      getVehicle();
+    }
+  }
+
+    return (
+        <div className={[classes.background, classes.container].join(" ")}>
+            <div className={classes.Item_List}>
+                <h1 className={classes.h11}> Add New Vehicle </h1>
+                <br></br>
+                <label className={classes.label}>
+                    <input
+                        className={classes.forminput}
+                        type="text"
+                        placeholder="Vehicle ID"
+                        onChange={(e) => setVehicleId(e.target.value)}
+                        value={vehicleId}
+                    />
+                </label>
+                <label className={classes.label}>
+                    <input
+                        className={classes.forminput}
+                        type="text"
+                        placeholder="Brand"
+                        onChange={(e) => setBrand(e.target.value)}  value={brand}
+                    />
+                </label>
+                <label className={classes.label}>
+                    <input
+                        className={classes.forminput}
+                        type="text"
+                        placeholder="Model"
+                        onChange={(e) => setModel(e.target.value)}
+          value={model}
+                    />
+                </label>
+                <label className={classes.label}>
+                    <input
+                        className={classes.forminput}
+                        type="text"
+                        placeholder="Registration Number"
+                        onChange={(e) => setRegistrationNumber(e.target.value)}
+                        value={registrationNumber}
+                    />
+                </label>
+                <label className={classes.label}>
+                    <input
+                        className={classes.forminput}
+                        type="text"
+                        placeholder="Capacity"
+                        onChange={(e) => setCapacity(e.target.value)}
+          value={capacity}
+                    />
+                </label>
+                <button  onClick={handleAddVehicle} className={classes.button}>Add Vehicle</button>
                 <br></br>
                 <br></br>
-                <div className={classes.Container}>
+                <div className={classes.container2}>
                     <div className={classes.Vehicles}>
-                        <h1 className={classes.h1}>Vehicle List:</h1>
+                        <h1 className={classes.h11}>Vehicle List:</h1>
                         <br></br>
                         <ul className={classes.ul}>
                             <li className={classes.li1}>#</li>
@@ -41,7 +109,24 @@ const Vehiclepage = () => {
                             <li className={classes.li1}>Capacity</li>
                             <li className={classes.li1}>Delete</li>
                         </ul>
-                    </div>
+                        {
+        vehicle.map((vehicle, index) =>
+          <ul key={vehicle.vehicleId}  className={classes.ul}>
+            <li className={classes.li1}>{index + 1}</li>
+            <li className={classes.li}>{vehicle.vehicleId}</li>
+            <li className={classes.li1}> {vehicle.brand}</li>
+            <li className={classes.li}>{vehicle.model}</li>
+           
+            <li className={classes.li2}>{vehicle.registrationNumber}</li>
+            <li className={classes.li1}>{vehicle.capacity}</li>
+            <li className={classes.li1}>
+              <button onClick={() => deleteVehicle(vehicle.vehicleId)} className={classes.button2}>Delete</button>
+            </li>
+          </ul>
+        )
+      }
+
+                                 </div>
                 </div>
             </div>
         </div>

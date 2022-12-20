@@ -1,20 +1,9 @@
-.background{
-    background-image: url(../../Assets/Adminpage.jpg);
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    min-height: 700px;
-    background-position: flex;
-  }
-
-  .Container {
-    min-height: 768px;
-    background-color: #000;
-    opacity: .7;
-    padding:2%;
-    display: flex;
-    min-width: 900px;
+  .container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
   }
 
 .inputbox {
@@ -50,6 +39,21 @@
 .button:hover {
     background-color:rgba(255, 166, 0, 0.7);
 }
+.button2 {
+    width: 90px;
+    height: 35px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    background: orange;
+    border-radius: 10px;
+    font-family: serif;
+    align-self: center;
+}
+
+.button2:hover {
+    background-color:rgba(255, 166, 0, 0.7);
+}
 
 .h1 {
     text-align: center;
@@ -58,15 +62,16 @@
     color: #3c1361;
 }
 
+.h11 {
+    text-align: center;
+    text-decoration: wavy underline;
+    font-family: cursive;
+    color: aliceblue;
+}
+
 .Item_List {
     text-align: center;
     margin-top: 50px;
-}
-
-.container2 {
-    min-height: 768px;
-    border: 1px dotted rgb(6, 6, 6);
-    padding: 2%;
 }
 
 .heading {
@@ -143,4 +148,141 @@
 .btn:hover {
     transform: translateY(-10px);
     background-color: #5b5350;
+}
+
+/* New CSS */
+
+.background {
+    background-image: url(../../Assets/BG-1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+  }
+
+.row {
+    display: flex;
+    height: 95%;
+    align-items: center;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+
+  .h1 {
+    color: rgb(30, 33, 32);
+    font-size: 50px;
+  }
+  
+  .p {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: orange;
+    font-size: 15px;
+    margin: 5px;
+    margin-left: 100px;
+    margin-bottom: -25px;
+  }
+
+
+.content {
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.contentpar {
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.contenth1 {
+    font-family: Arial;
+    font-size: 50px;
+    padding-left: 20px;
+    padding-top: 230px;
+    /* margin-top: 9%; */
+    letter-spacing: 2px;
+}
+
+.contentspan {
+    color: orange;
+    font-size: 60px;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    padding: 15px 25px;
+    background-image: url(../../Assets/phone.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+.container2 {
+    width: 1200px;
+    min-height: 450px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
+    /* position: absolute; */
+    /* top: 170px;
+    left: 870px; */
+    border-radius: 10px;
+    padding: 25px;
+  }
+
+  .forminput {
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid orange;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.btn {
+    width: 240px;
+    height: 40px;
+    background: orange;
+    border: none;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: orange;
+}
+
+.formh2 {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: orange;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 25px;
+    margin-left: 100px;
+    padding: 8px;
 }

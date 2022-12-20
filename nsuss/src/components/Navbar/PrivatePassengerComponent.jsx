@@ -3,12 +3,13 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const PrivatePassengerComponents=()=>{
     const userID = parseInt(JSON.parse(window.localStorage.getItem("user")).userid);
-    let studAuth=false;
-    if(userID>1000000000 && userID<9999999999){
-        studAuth=true;
+    const facID = JSON.parse(window.localStorage.getItem("user")).userid;
+    let auth=false;
+    if((userID>1000000000 && userID<9999999999) || facID.length===3||facID.length===4){
+        auth=true;
     }
-    else studAuth=false;
-    return studAuth ? <Outlet/> : <Navigate to="/"/>
+    else auth=false;
+    return auth ? <Outlet/> : <Navigate to="/"/>
 }
 
 export default PrivatePassengerComponents;

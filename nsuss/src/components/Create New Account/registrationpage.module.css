@@ -113,7 +113,7 @@
 
 .container2 {
     width: 450px;
-    height: 600px;
+    height: 700px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
     /* position: absolute; */
     /* top: 170px;
@@ -169,4 +169,13 @@
     margin: 25px;
     margin-left: 100px;
     padding: 8px;
+}
+
+.span{
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(164, 19, 19);
+  font-size: 22px;
+  background-color: transparent;
+  margin-left: 100px;
 }
